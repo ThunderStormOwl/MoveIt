@@ -13,6 +13,7 @@
     border-radius: 4px;
     background: var(--gray-line);
     margin: 0 1.5rem;
+    position: relative;
 }
 
 .experienceBar > div > div{ 
@@ -23,8 +24,8 @@
 
 
 
-span.currentExperience{
+span.currentExperience {
     position: absolute;
-    top: 60px;
-    transform: translateX(-55%);
+    top: 12px;
+    transform: translateX(-50%);
 }
