@@ -1,10 +1,22 @@
 import { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
+import { CountdownContext } from '../contexts/CountdownContext';
 import styles from '../styles/components/ChallengeBox.module.css'
 
 export function ChallengeBox(){
 
-    const { activeChallenge, resetChallenge } = useContext(ChallengesContext)
+    const { activeChallenge, resetChallenge, completedChallenge } = useContext(ChallengesContext)
+    const {resetCountdown} = useContext(CountdownContext);
+
+    function handleChallengeSucceeded(){
+        completedChallenge();
+        resetCountdown();
+    }
+
+    function handleChallengeFailed() {
+        resetChallenge();
+        resetCountdown();
+    }
 
     return(
         <div className={styles.ChallengeBoxContainer}>
@@ -20,13 +32,14 @@ export function ChallengeBox(){
                         <button 
                             type="button"
                             className={styles.challengeFailedButton}
-                            onClick={resetChallenge}
+                            onClick={handleChallengeFailed}
                         >
                             Couldn't do it :(
                         </button>
                         <button
                             type="button"
                             className={styles.challengeSucceededButton}
+                            onClick={handleChallengeSucceeded}
                         >
                             I did it! \o/
                         </button>
@@ -37,7 +50,7 @@ export function ChallengeBox(){
                     <strong>Begin a cycle to receive a new challenge!</strong>
                     <p>
                     <img src="icons/level-up.svg" alt="Level Up"/>
-                    Gain levels by completing challenges
+                        Gain levels by completing challenges
                     </p>
                 </div>
             )}
