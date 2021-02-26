@@ -19,18 +19,16 @@ export default function Home() {
       <ExperienceBar />
 
       <section>
-        <div>
-          <Profile />
-          <CompletedChallenges />
-          <CountdownProvider>
+        <CountdownProvider>
+          <div>
+            <Profile />
+            <CompletedChallenges />
             <Countdown />
-          </CountdownProvider>
-        </div>
-        <div>
-          <CountdownProvider>
-            <ChallengeBox />
-          </CountdownProvider>
-        </div>
+          </div>
+          <div>
+              <ChallengeBox />
+          </div>
+        </CountdownProvider>
       </section>
     </div>
     
