@@ -1,0 +1,21 @@
+.container{
+    
+    width: 5rem;
+    background: var(--white);
+
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    position: absolute;
+    box-shadow: 0 0 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+.container > header{
+    text-align: center;
+}
+
+.container > header > img {
+    padding-top: 1.5rem;
+}
