@@ -5,9 +5,13 @@ export function SideNavBar() {
 
     return(
         <div className={styles.container}>
-            <header>
-                <img src="/NavBar-Logo.svg" />
-            </header>
+            <div className={styles.logoContainer}>
+                <img src="/icons/navbar-icons/logo.svg" alt="oops"/>
+            </div>
+            <div className={styles.buttonsContainer}>
+                <button type="button" className={styles.homeButton}/>
+                <button type="button" className={styles.leaderboardButton}/>
+            </div>
         </div>
     )
 }
