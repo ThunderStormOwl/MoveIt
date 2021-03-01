@@ -1,4 +1,6 @@
-import { Head } from 'next/document'
+import { NavBarHomeButton } from './NavBarHomeButton';
+import { NavBarLeaderboardButton } from './NavBarLeaderboardButton';
+
 import styles from '../styles/components/SideNavBar.module.css'
 
 export function SideNavBar() {
@@ -9,8 +11,8 @@ export function SideNavBar() {
                 <img src="/icons/navbar-icons/logo.svg" alt="oops"/>
             </div>
             <div className={styles.buttonsContainer}>
-                <button type="button" className={styles.homeButton}/>
-                <button type="button" className={styles.leaderboardButton}/>
+                <NavBarHomeButton />
+                <NavBarLeaderboardButton />
             </div>
         </div>
     )
