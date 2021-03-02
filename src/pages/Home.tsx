@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 import { CompletedChallenges } from '../components/CompletedChallenges';
 import { Countdown } from '../components/Countdown';
 import { ExperienceBar } from '../components/ExperienceBar';
@@ -14,7 +13,7 @@ interface HomeProps {
     level: number;
     currentXP: number;
     challengesCompleted: number;
-  }
+}
 
 export function Home(props:HomeProps){
     return(

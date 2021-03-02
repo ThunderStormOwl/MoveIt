@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import { isatty } from "tty";
 import { ChallengesContext } from "./ChallengesContext";
 
 interface CountdownContextData{
