@@ -10,6 +10,8 @@ import { CountdownProvider } from '../contexts/CountdownContext';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
 
 import styles from '../styles/pages/Home.module.css';
+import { SideNavBar } from '../components/SideNavBar';
+import { Home } from './Home';
 
 interface HomeProps {
   level: number;
@@ -17,37 +19,12 @@ interface HomeProps {
   challengesCompleted: number;
 }
 
-export default function Home(props:HomeProps) {
+export default function index(props:HomeProps) {
   return (
-    
-    <div className={styles.container}>
-      <ChallengesProvider 
-        level={props.level} 
-        currentXP ={props.currentXP}
-        challengesCompleted = {props.challengesCompleted}
-      >
-
-        <Head>
-          <title>Home | move.it</title>
-        </Head>
-        <ExperienceBar />
-
-        <CountdownProvider>
-          <section>
-              <div>
-                <Profile />
-                <CompletedChallenges />
-                <Countdown />
-              </div>
-              <div>
-                  <ChallengeBox />
-              </div>
-          </section>
-        </CountdownProvider>
-
-      </ChallengesProvider>
+    <div>
+      <SideNavBar />
+      <Home level={props.level} currentXP={props.currentXP} challengesCompleted={props.challengesCompleted} />
     </div>
-    
   );
 }
 

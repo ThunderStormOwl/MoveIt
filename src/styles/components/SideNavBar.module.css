@@ -1,0 +1,26 @@
+.container{
+    
+    width: 5rem;
+    background: var(--white);
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    position: absolute;
+    box-shadow: 0 0 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+.logoContainer{
+    position: absolute;
+    top: 10px;
+    display: flex;
+    width: 5rem;
+    justify-content: center;
+}

@@ -1,0 +1,18 @@
+.button{
+    width: 100%;
+    height: 5rem;
+    top: 50%;
+    
+    background-color: var(--white);
+}
+
+.unselected{
+    background: url("/icons/navbar-icons/home-unselected.svg") no-repeat center;
+    border: none;
+}
+
+.selected{
+    background: url("/icons/navbar-icons/home-selected.svg") no-repeat center;
+    border: solid var(--blue);
+    border-width: 0px 0px 0px 5px;
+}
